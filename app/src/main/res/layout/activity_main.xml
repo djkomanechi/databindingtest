@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="setting" type="com.example.test.databindingsample.Settings" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="48dp"
+                android:text="Setting A"
+                android:onClick="@{setting::onAClick}" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="56dp"
+                android:background="@android:color/holo_orange_dark"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="@={setting.settingA}" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="48dp"
+                android:text="Setting B"
+                android:onClick="@{setting::onBClick}" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_bright"
+                android:textColor="@android:color/holo_red_light"
+                android:text="@={setting.settingB}" />
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="48dp"
+                android:text="Setting C" />
+            <Switch
+                android:layout_width="85dp"
+                android:layout_height="34dp"
+                android:onClick="@{setting::onClick}"
+                android:checked="@={setting.settingC}"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Button"/>
+    </LinearLayout>
+</layout>
