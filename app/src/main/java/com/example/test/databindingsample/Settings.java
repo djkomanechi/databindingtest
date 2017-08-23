@@ -10,8 +10,8 @@ public class Settings extends BaseObservable {
     public boolean settingC;
 
     public Settings() {
-        settingA = "4K";
-        settingB = "Intelligent active";
+        settingA = "text setting a";
+        settingB = "text setting b";
         settingC = true;
     }
 
